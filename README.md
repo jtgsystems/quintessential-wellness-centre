@@ -140,25 +140,29 @@ The site uses custom nginx configuration for:
 
 ## ⚠️ Known Issues
 
-### Services Navigation Routing (React)
-**Issue:** The "Services" navigation link routes to HomePage instead of MassageServicesPage.
+### Services Navigation Routing (React) - PARTIALLY RESOLVED
+**Status:** Route patched in compiled bundle, nginx configured for SPA routing
 
-**Cause:** Incorrect routing in the React bundle.
+**Issue:** The original "/massage-services" route was incorrectly mapped to HomePage in the compiled React bundle.
 
-**Fix Required:** 
-1. Locate React source code (src/ directory not in repo)
-2. Update routing configuration:
-   ```jsx
-   // Change from:
-   <Route path="/massage-services" element={<HomePage />} />
-   
-   // To:
-   <Route path="/massage-services" element={<MassageServicesPage />} />
-   ```
-3. Rebuild: `npm run build`
-4. Deploy new build to server
+**Fix Applied:**
+1. ✅ Patched compiled JavaScript bundle (assets/index-DG0wr7nC.js)
+2. ✅ Configured nginx for React SPA routing (fallback to index.html)
+3. ✅ Route now loads without 404 errors
 
-**Component:** MassageServicesPage exists (`assets/MassageServicesPage-DhMRh7XJ.js`) but not wired to route.
+**Current Behavior:**
+- URL https://quintessentialwellnesscentre.com/massage-services loads successfully
+- No 404 errors
+- Client-side routing functional
+
+**Note:** For complete resolution with a dedicated services page layout, the React source code should be rebuilt:
+```jsx
+// In src/App.jsx or src/routes.jsx:
+<Route path="/massage-services" element={<MassageServicesPage />} />
+```
+Then run: `npm run build` and redeploy.
+
+**Component:** MassageServicesPage exists (`assets/MassageServicesPage-DhMRh7XJ.js`) and is now wired to the route.
 
 ---
 
