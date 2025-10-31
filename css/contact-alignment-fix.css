@@ -1,0 +1,105 @@
+/* ==========================================================================
+   CONTACT SECTION MAP ALIGNMENT FIX
+   ========================================================================== */
+
+/* Main contacts section layout improvements */
+#contacts-1 .row {
+    align-items: stretch;
+}
+
+/* Map container - ensure consistent height */
+#contacts-1 .google-map {
+    height: 450px;
+    position: relative;
+    padding: 0;
+    border-radius: 4px;
+    overflow: hidden;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+#contacts-1 .google-map iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 0;
+}
+
+/* Contact info container - match map height and center content */
+#contacts-1 .contacts-info {
+    height: 450px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding: 40px 25px;
+    background-color: #fefdfc;
+    border-radius: 4px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+/* Contact boxes spacing within the aligned container */
+#contacts-1 .cbox-1 {
+    margin-bottom: 30px;
+}
+
+#contacts-1 .cbox-1:last-child {
+    margin-bottom: 0;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991.98px) {
+    #contacts-1 .contacts-info {
+        height: auto;
+        margin-top: 30px;
+        padding: 30px 25px;
+    }
+    
+    #contacts-1 .google-map {
+        margin-bottom: 0;
+    }
+}
+
+@media (max-width: 767.98px) {
+    #contacts-1 .google-map {
+        height: 300px;
+        margin-bottom: 20px;
+    }
+    
+    #contacts-1 .contacts-info {
+        height: auto;
+        padding: 25px 20px;
+    }
+}
+
+/* Enhanced visual styling for better integration */
+#contacts-1 .cbox-1 h5 {
+    color: #727475;
+    margin-bottom: 12px;
+    font-weight: 600;
+}
+
+#contacts-1 .cbox-1 p {
+    color: #808080;
+    line-height: 1.4;
+    margin-bottom: 8px;
+}
+
+#contacts-1 .cbox-1 p span {
+    font-weight: 500;
+    color: #727475;
+}
+
+/* Link styling improvements */
+#contacts-1 .cbox-1 a {
+    color: #efa697;
+    text-decoration: none;
+    transition: color 0.3s ease;
+}
+
+#contacts-1 .cbox-1 a:hover {
+    color: #d8c2be;
+    text-decoration: none;
+}

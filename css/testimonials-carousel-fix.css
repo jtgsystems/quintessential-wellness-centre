@@ -1,0 +1,99 @@
+/* Testimonials Carousel Height Fix */
+
+/* Ensure consistent carousel container height */
+#reviews-1 .reviews-wrapper {
+    min-height: 400px !important;
+    display: flex;
+    align-items: center;
+}
+
+/* For Owl Carousel specific */
+#reviews-1 .owl-carousel {
+    min-height: 380px !important;
+}
+
+#reviews-1 .owl-stage-outer {
+    min-height: 360px !important;
+}
+
+#reviews-1 .owl-item {
+    min-height: 340px !important;
+}
+
+/* For React carousel implementation */
+#reviews-1 .testimonials-carousel {
+    min-height: 400px !important;
+    position: relative;
+}
+
+#reviews-1 .testimonial-slide {
+    min-height: 360px !important;
+}
+
+/* Ensure all review cards have equal height */
+#reviews-1 .review-1 {
+    height: 100%;
+    min-height: 320px !important;
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Center carousel content */
+#reviews-1 .reviews-wrapper > div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: inherit;
+}
+
+/* Improved carousel navigation dots */
+#reviews-1 .carousel-indicators,
+#reviews-1 .owl-dots {
+    position: relative !important;
+    bottom: 0 !important;
+    margin-top: 32px !important;
+    margin-bottom: 0 !important;
+}
+
+#reviews-1 .carousel-indicators button,
+#reviews-1 .owl-dot {
+    width: 12px !important;
+    height: 12px !important;
+    margin: 0 6px !important;
+    background-color: rgba(255, 255, 255, 0.4) !important;
+    border: none !important;
+    border-radius: 50% !important;
+    transition: all 0.3s ease !important;
+}
+
+#reviews-1 .carousel-indicators button.active,
+#reviews-1 .owl-dot.active {
+    background-color: #FFD700 !important;
+    transform: scale(1.2);
+}
+
+/* Ensure smooth transitions */
+#reviews-1 .testimonial-transition {
+    transition: opacity 0.3s ease-in-out;
+}
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    #reviews-1 .reviews-wrapper,
+    #reviews-1 .testimonials-carousel {
+        min-height: 450px !important;
+    }
+    
+    #reviews-1 .review-1 {
+        min-height: 380px !important;
+        padding: 32px 24px !important;
+    }
+}
+
+/* Prevent layout shift during loading */
+#reviews-1 .reviews-loading {
+    min-height: 400px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

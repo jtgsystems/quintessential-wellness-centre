@@ -1,0 +1,52 @@
+/* ==========================================================================
+   ABOUT SECTION PARAGRAPH WIDTH FIX
+   ========================================================================== */
+
+/* Widen the about section paragraphs for better readability */
+#about-4 .section-title p {
+    padding: 0 5% !important;        /* Reduce from 15% to 5% each side */
+    max-width: none;
+    line-height: 1.6;
+    margin-bottom: 20px;
+}
+
+/* Alternative: Full-width paragraphs for maximum readability */
+#about-4 .section-title {
+    max-width: 100%;
+}
+
+/* Ensure proper spacing between paragraphs */
+#about-4 .section-title p:last-child {
+    margin-bottom: 0;
+}
+
+/* Enhanced typography for better visual hierarchy */
+#about-4 .section-title h2 {
+    margin-bottom: 30px;
+    line-height: 1.3;
+}
+
+/* Responsive adjustments to maintain readability */
+@media (max-width: 991.98px) {
+    #about-4 .section-title p {
+        padding: 0 2% !important;    /* Further reduce on tablets */
+    }
+}
+
+@media (max-width: 767.98px) {
+    #about-4 .section-title p {
+        padding: 0 !important;       /* Remove padding on mobile */
+    }
+}
+
+/* Enhanced readability improvements */
+#about-4 .section-title p {
+    font-size: 1.125rem;           /* Slightly larger text */
+    color: #727475;                /* Better contrast */
+    font-weight: 400;
+}
+
+#about-4 .section-title p b {
+    color: #efa697;                /* Highlight bold text */
+    font-weight: 600;
+}

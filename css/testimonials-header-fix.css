@@ -1,0 +1,35 @@
+/* Testimonials Header Color Fix */
+
+/* Ensure testimonials transparent header is always white with Alex Brush script font */
+#reviews-1 .tra-header,
+.reviews-section .tra-header {
+  color: #ffffff !important;
+  opacity: 0.8;
+  font-family: 'Alex Brush', cursive !important;
+  font-weight: 300;
+  text-transform: none !important;
+  letter-spacing: 2px;
+  margin-bottom: 15px;
+  font-size: 6rem !important;
+}
+
+/* Additional specificity for testimonials section */
+.bg-color-03 .tra-header {
+  color: #ffffff !important;
+}
+
+/* Ensure all text in testimonials section has proper contrast */
+#reviews-1 h3,
+.reviews-section h3 {
+  color: #ffffff !important;
+}
+
+#reviews-1 .txt-color-05,
+.reviews-section .txt-color-05 {
+  color: rgba(255, 255, 255, 0.8) !important;
+}
+
+/* Bottom CTA text colors */
+#reviews-1 .txt-color-01 {
+  color: #ffffff !important;
+}

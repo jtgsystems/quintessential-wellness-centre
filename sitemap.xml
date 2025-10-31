@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
+        xmlns:image="http://www.google.com/schemas/sitemap-image/1.1"
+        xmlns:news="http://www.google.com/schemas/sitemap-news/0.9">
+  
+  <!-- Homepage -->
+  <url>
+    <loc>https://quintessentialwellness.ca/</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>1.0</priority>
+    <image:image>
+      <image:loc>https://quintessentialwellness.ca/images/hero-11.jpg</image:loc>
+      <image:title>Quintessential Wellness Massage Therapy Clinic</image:title>
+      <image:caption>Premier massage therapy clinic in Niagara Falls and St. Catharines</image:caption>
+    </image:image>
+  </url>
+
+  <!-- Services Main Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/services</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Individual Service Pages -->
+  <url>
+    <loc>https://quintessentialwellness.ca/services/deep-tissue-massage</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+    <image:image>
+      <image:loc>https://quintessentialwellness.ca/images/deep-tissue-massage.jpg</image:loc>
+      <image:title>Deep Tissue Massage Therapy</image:title>
+    </image:image>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/services/sports-massage</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/services/injury-rehabilitation</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/services/chronic-pain-relief</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/services/prenatal-massage</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/services/relaxation-massage</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- About Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/about</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+    <image:image>
+      <image:loc>https://quintessentialwellness.ca/images/about-8.jpg</image:loc>
+      <image:title>About Quintessential Wellness Team</image:title>
+    </image:image>
+  </url>
+
+  <!-- Contact Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/contact</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Booking Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/booking</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.9</priority>
+  </url>
+
+  <!-- Pricing Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/pricing</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- FAQ Page -->
+  <url>
+    <loc>https://quintessentialwellness.ca/faq</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Blog/Articles -->
+  <url>
+    <loc>https://quintessentialwellness.ca/blog</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>weekly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/blog/benefits-of-massage-therapy</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/blog/sports-injury-prevention</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/blog/chronic-pain-management</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.6</priority>
+  </url>
+
+  <!-- Location-Specific Pages -->
+  <url>
+    <loc>https://quintessentialwellness.ca/locations/niagara-falls</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/locations/st-catharines</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.8</priority>
+  </url>
+
+  <!-- Condition-Specific Pages -->
+  <url>
+    <loc>https://quintessentialwellness.ca/conditions/sciatica-treatment</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/conditions/whiplash-therapy</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/conditions/plantar-fasciitis</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>monthly</changefreq>
+    <priority>0.7</priority>
+  </url>
+
+  <!-- Legal Pages -->
+  <url>
+    <loc>https://quintessentialwellness.ca/privacy-policy</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+  <url>
+    <loc>https://quintessentialwellness.ca/terms-of-service</loc>
+    <lastmod>2025-05-24</lastmod>
+    <changefreq>yearly</changefreq>
+    <priority>0.3</priority>
+  </url>
+
+</urlset>

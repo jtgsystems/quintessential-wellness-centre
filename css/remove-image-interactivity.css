@@ -1,0 +1,155 @@
+/* ==========================================================================
+   SERVICE CARDS - REMOVE IMAGE INTERACTIVITY
+   ========================================================================== */
+
+/* Disable image overlay system completely */
+.service-card-enhanced .image-overlay {
+    display: none !important;                    /* Hide overlay completely */
+    opacity: 0 !important;
+    pointer-events: none !important;
+}
+
+/* Remove overlay icon and animations */
+.service-card-enhanced .overlay-icon {
+    display: none !important;                    /* Hide overlay icon */
+    animation: none !important;                  /* Disable pulse animation */
+}
+
+.service-card-enhanced .overlay-content {
+    display: none !important;                    /* Hide overlay content */
+}
+
+/* Remove clickable cursor behavior */
+.service-card-enhanced .service-image-container {
+    cursor: default !important;                  /* Remove pointer cursor */
+    pointer-events: none !important;             /* Disable click events */
+}
+
+.service-card-enhanced .service-image {
+    cursor: default !important;                  /* Remove pointer cursor */
+    pointer-events: none !important;             /* Disable click events */
+}
+
+/* Disable image hover scaling while maintaining card hover */
+.service-card-enhanced:hover .service-image {
+    transform: scale(1) !important;              /* Remove image scaling */
+}
+
+/* Remove any overlay hover effects */
+.service-card-enhanced:hover .image-overlay {
+    opacity: 0 !important;                       /* Ensure overlay stays hidden */
+    display: none !important;
+}
+
+/* Maintain card hover effects but remove image interactivity */
+.service-card-enhanced:hover {
+    transform: translateY(-12px);                /* Keep card lift effect */
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);   /* Keep card shadow enhancement */
+}
+
+/* Remove clickable appearance from entire card if needed */
+.service-card-enhanced[role="article"] {
+    cursor: default !important;                  /* Remove pointer from card */
+}
+
+/* Ensure no overlay animations occur */
+@keyframes pulse {
+    0%, 50%, 100% { 
+        transform: scale(1) !important; 
+        opacity: 0 !important;
+    }
+}
+
+/* Remove overlay transitions */
+.service-card-enhanced .image-overlay,
+.service-card-enhanced .overlay-icon,
+.service-card-enhanced .overlay-content {
+    transition: none !important;                 /* Disable all transitions */
+}
+
+/* Responsive - ensure overlay remains disabled across all breakpoints */
+@media (max-width: 991.98px) {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        display: none !important;
+        opacity: 0 !important;
+    }
+    
+    .service-card-enhanced .service-image-container,
+    .service-card-enhanced .service-image {
+        cursor: default !important;
+        pointer-events: none !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        display: none !important;
+        opacity: 0 !important;
+    }
+    
+    .service-card-enhanced .service-image-container,
+    .service-card-enhanced .service-image {
+        cursor: default !important;
+        pointer-events: none !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        display: none !important;
+        opacity: 0 !important;
+    }
+    
+    .service-card-enhanced .service-image-container,
+    .service-card-enhanced .service-image {
+        cursor: default !important;
+        pointer-events: none !important;
+    }
+    
+    .service-card-enhanced .overlay-icon {
+        font-size: 0 !important;                 /* Ensure icon is completely hidden */
+    }
+}
+
+/* Accessibility - ensure screen readers don't detect clickable images */
+.service-card-enhanced .service-image-container,
+.service-card-enhanced .service-image {
+    role: none;
+    tabindex: -1;
+}
+
+/* Print styles - ensure overlays don't appear in print */
+@media print {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        display: none !important;
+    }
+}
+
+/* High contrast mode - ensure overlays remain disabled */
+@media (prefers-contrast: high) {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        display: none !important;
+        opacity: 0 !important;
+    }
+}
+
+/* Reduced motion - ensure no overlay animations */
+@media (prefers-reduced-motion: reduce) {
+    .service-card-enhanced .image-overlay,
+    .service-card-enhanced .overlay-icon,
+    .service-card-enhanced .overlay-content {
+        animation: none !important;
+        transition: none !important;
+        display: none !important;
+    }
+}

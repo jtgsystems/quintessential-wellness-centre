@@ -1,0 +1,396 @@
+/* COMPREHENSIVE LAYOUT & SPACING SYSTEM - EVIDENCE-BASED DESIGN */
+
+/* CSS Grid System Standardization - Bootstrap 4/5 Compliance */
+:root {
+    --section-padding-xl: 120px;
+    --section-padding-lg: 100px;
+    --section-padding-md: 80px;
+    --section-padding-sm: 60px;
+    --section-padding-xs: 40px;
+    
+    --container-padding: 20px;
+    --element-margin-xl: 60px;
+    --element-margin-lg: 40px;
+    --element-margin-md: 30px;
+    --element-margin-sm: 20px;
+    
+    --grid-gutter: 30px;
+    --grid-gutter-sm: 15px;
+}
+
+/* SECTION STANDARDIZATION - DRY PRINCIPLE */
+.division {
+    padding: var(--section-padding-lg) 0;
+    position: relative;
+    overflow: hidden;
+}
+
+/* Section Padding Hierarchy - Mobile-First Approach */
+.division.xl-padding { padding: var(--section-padding-xl) 0; }
+.division.lg-padding { padding: var(--section-padding-lg) 0; }
+.division.md-padding { padding: var(--section-padding-md) 0; }
+.division.sm-padding { padding: var(--section-padding-sm) 0; }
+.division.xs-padding { padding: var(--section-padding-xs) 0; }
+
+/* HERO SECTION OPTIMIZATION */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--section-padding-xl) 0;
+}
+
+.hero-section .container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+.hero-section .row {
+    align-items: center;
+    min-height: 60vh;
+}
+
+/* PRICING SECTION GRID ENHANCEMENT */
+.pricing-section {
+    background: var(--light-enhanced);
+    padding: var(--section-padding-lg) 0;
+}
+
+.pricing-wrapper .row {
+    margin: 0 -15px;
+    display: flex;
+    align-items: stretch;
+}
+
+.pricing-wrapper [class*="col-"] {
+    padding: 0 15px;
+    margin-bottom: 30px;
+    display: flex;
+    flex-direction: column;
+}
+
+.pricing-2-banner,
+.pricing-2-table,
+.pricing-2-img {
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+/* ABOUT SECTION STRUCTURE OPTIMIZATION */
+.about-section {
+    padding: var(--section-padding-lg) 0;
+}
+
+.about-section .section-title {
+    margin-bottom: var(--element-margin-xl);
+}
+
+.abox-2-wrapper {
+    margin-top: var(--element-margin-lg);
+}
+
+.abox-2-wrapper .row {
+    margin: 0 -15px;
+}
+
+.abox-2-wrapper [class*="col-"] {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+/* SERVICES SECTION GRID SYSTEM */
+.services-section {
+    padding: var(--section-padding-lg) 0;
+}
+
+.sbox-13-wrapper .row {
+    margin: 0 -15px;
+}
+
+.sbox-13-wrapper [class*="col-"] {
+    padding: 0 15px;
+    margin-bottom: 30px;
+}
+
+.sbox-13 {
+    height: 100%;
+    min-height: 300px;
+    display: flex;
+    align-items: center;
+    padding: 40px 30px;
+}
+
+/* TEAM SECTION ALIGNMENT */
+.team-section {
+    padding: var(--section-padding-lg) 0;
+}
+
+.team-section .section-title {
+    margin-bottom: var(--element-margin-xl);
+}
+
+.tm-wrapper .row {
+    margin: 0 -15px;
+    justify-content: center;
+}
+
+.tm-wrapper [class*="col-"] {
+    padding: 0 15px;
+    margin-bottom: 40px;
+}
+
+.team-member {
+    text-align: center;
+    height: 100%;
+}
+
+/* TESTIMONIALS SECTION SPACING */
+.reviews-section {
+    padding: var(--section-padding-lg) 0;
+}
+
+.reviews-wrapper {
+    margin-top: var(--element-margin-lg);
+}
+
+.review-1 {
+    margin: 0 15px;
+    padding: 40px 30px;
+    height: auto;
+    min-height: 300px;
+}
+
+/* CONTACT SECTION LAYOUT */
+.contacts-section {
+    padding: var(--section-padding-lg) 0;
+}
+
+.contacts-section .row {
+    align-items: flex-start;
+}
+
+.google-map iframe {
+    width: 100%;
+    height: 450px;
+    border-radius: 15px;
+}
+
+.contacts-info {
+    padding: 30px 25px;
+}
+
+/* SECTION TITLE STANDARDIZATION */
+.section-title {
+    text-align: center;
+    margin-bottom: var(--element-margin-xl);
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.section-title h2 {
+    margin-bottom: var(--element-margin-sm);
+}
+
+.section-title h3 {
+    margin-bottom: var(--element-margin-md);
+}
+
+.section-title p {
+    margin-bottom: 0;
+    font-size: 1.1rem;
+    line-height: 1.7;
+}
+
+/* RESPONSIVE GRID SYSTEM ENHANCEMENTS */
+@media (max-width: 1199.98px) {
+    .division {
+        padding: var(--section-padding-md) 0;
+    }
+    
+    .section-title {
+        margin-bottom: var(--element-margin-lg);
+    }
+}
+
+@media (max-width: 991.98px) {
+    .division {
+        padding: var(--section-padding-sm) 0;
+    }
+    
+    .hero-section {
+        min-height: 80vh;
+        padding: var(--section-padding-md) 0;
+    }
+    
+    .pricing-wrapper [class*="col-"],
+    .abox-2-wrapper [class*="col-"],
+    .sbox-13-wrapper [class*="col-"],
+    .tm-wrapper [class*="col-"] {
+        margin-bottom: 40px;
+    }
+    
+    .section-title {
+        margin-bottom: var(--element-margin-md);
+    }
+    
+    .section-title h2 {
+        font-size: 2.2rem;
+    }
+    
+    .section-title h3 {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 767.98px) {
+    :root {
+        --container-padding: 15px;
+    }
+    
+    .division {
+        padding: var(--section-padding-xs) 0;
+    }
+    
+    .hero-section {
+        min-height: 70vh;
+        padding: var(--section-padding-sm) 0;
+    }
+    
+    .hero-section .row {
+        min-height: auto;
+    }
+    
+    .pricing-wrapper [class*="col-"],
+    .abox-2-wrapper [class*="col-"],
+    .sbox-13-wrapper [class*="col-"],
+    .tm-wrapper [class*="col-"] {
+        margin-bottom: 30px;
+    }
+    
+    .section-title {
+        margin-bottom: var(--element-margin-sm);
+    }
+    
+    .section-title h2 {
+        font-size: 1.8rem;
+    }
+    
+    .section-title h3 {
+        font-size: 1.6rem;
+    }
+    
+    .google-map iframe {
+        height: 300px;
+    }
+    
+    .contacts-info {
+        padding: 20px 15px;
+        margin-top: 30px;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .sbox-13 {
+        min-height: 250px;
+        padding: 30px 20px;
+    }
+    
+    .review-1 {
+        padding: 30px 20px;
+        min-height: 250px;
+    }
+    
+    .section-title h2 {
+        font-size: 1.6rem;
+    }
+    
+    .section-title h3 {
+        font-size: 1.4rem;
+    }
+}
+
+/* CONTAINER SYSTEM OPTIMIZATION */
+.container {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 var(--container-padding);
+}
+
+/* ROW AND COLUMN SYSTEM ENHANCEMENT */
+.row {
+    margin: 0 -15px;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+[class*="col-"] {
+    padding: 0 15px;
+    width: 100%;
+    position: relative;
+}
+
+/* FLEXBOX UTILITIES FOR LAYOUT CONSISTENCY */
+.d-flex { display: flex !important; }
+.align-items-center { align-items: center !important; }
+.align-items-stretch { align-items: stretch !important; }
+.justify-content-center { justify-content: center !important; }
+.justify-content-between { justify-content: space-between !important; }
+
+/* SPACING UTILITIES - BOOTSTRAP-COMPATIBLE */
+.mb-20 { margin-bottom: 20px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-60 { margin-bottom: 60px !important; }
+.mt-30 { margin-top: 30px !important; }
+.mt-40 { margin-top: 40px !important; }
+
+/* CONTENT AREA OPTIMIZATION */
+.img-block img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+}
+
+/* Z-INDEX MANAGEMENT */
+.hero-section { z-index: 10; }
+.about-section { z-index: 5; }
+.pricing-section { z-index: 5; }
+.services-section { z-index: 5; }
+.team-section { z-index: 5; }
+.reviews-section { z-index: 5; }
+.contacts-section { z-index: 5; }
+
+/* PERFORMANCE OPTIMIZATIONS */
+.division,
+.container,
+.row,
+[class*="col-"] {
+    transform: translateZ(0);
+    will-change: auto;
+}
+
+/* ACCESSIBILITY IMPROVEMENTS */
+.section-title,
+.pricing-2-banner,
+.sbox-13-txt,
+.team-member,
+.review-1,
+.contacts-info {
+    outline: none;
+}
+
+.section-title:focus-visible,
+.pricing-2-banner:focus-visible,
+.sbox-13:focus-visible,
+.team-member:focus-visible,
+.review-1:focus-visible {
+    outline: 2px solid var(--primary-enhanced);
+    outline-offset: 2px;
+}

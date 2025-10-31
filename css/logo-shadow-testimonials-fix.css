@@ -1,0 +1,88 @@
+/* Logo Shadow and Testimonials Text Fix - Updated */
+
+/* Remove shadow from all logos */
+.desktoplogo .logo-white img,
+.desktoplogo .logo-black img,
+.smllogo img {
+    filter: none !important;
+    -webkit-filter: none !important;
+}
+
+/* Fix Testimonials section text colors on pink background */
+#reviews-1.bg-color-03 .section-title h2.tra-header {
+    color: rgba(255, 255, 255, 0.3) !important; /* Semi-transparent white for script header */
+}
+
+#reviews-1.bg-color-03 .section-title h3 {
+    color: #ffffff !important; /* White for main title */
+}
+
+#reviews-1.bg-color-03 .section-title p {
+    color: rgba(255, 255, 255, 0.9) !important; /* Slightly transparent white for description */
+}
+
+/* Review cards - transparent background with proper text contrast */
+#reviews-1 .review-1 {
+    background-color: rgba(255, 255, 255, 0.1) !important; /* Very subtle white background */
+    backdrop-filter: blur(10px); /* Frosted glass effect */
+    -webkit-backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.2); /* Subtle border */
+    box-shadow: 0 8px 32px 0 rgba(31, 38, 135, 0.15); /* Soft shadow */
+    padding: 40px !important; /* Increased padding */
+    min-height: 320px !important; /* Fixed minimum height */
+    display: flex;
+    flex-direction: column;
+}
+
+/* Avatar spacing */
+#reviews-1 .testimonial-avatar {
+    margin-bottom: 24px !important;
+}
+
+#reviews-1 .review-1 .author-data {
+    margin-bottom: 24px !important;
+}
+
+#reviews-1 .review-1 .author-data h6 {
+    color: #ffffff !important; /* White text for author name */
+    margin-bottom: 8px !important;
+}
+
+#reviews-1 .review-1 .author-data p {
+    color: #FFD700 !important; /* Bright gold color for stars */
+    font-size: 20px !important;
+}
+
+#reviews-1 .review-1 .review-1-txt {
+    color: rgba(255, 255, 255, 0.95) !important; /* White text for review content */
+    flex-grow: 1; /* Take remaining space */
+    line-height: 1.8 !important; /* Better readability */
+}
+
+/* Service type text */
+#reviews-1 .review-1 .service-type {
+    color: rgba(255, 255, 255, 0.8) !important;
+    margin-top: 16px !important;
+}
+
+/* Testimonials navigation dots */
+#reviews-1 .owl-dots .owl-dot span {
+    background-color: rgba(255, 255, 255, 0.5) !important;
+}
+
+#reviews-1 .owl-dots .owl-dot.active span {
+    background-color: #ffffff !important;
+}
+
+/* Alternative: If the entire testimonials section needs white text */
+#reviews-1.bg-color-03 {
+    color: #ffffff !important;
+}
+
+#reviews-1.bg-color-03 .txt-color-01 {
+    color: #ffffff !important;
+}
+
+#reviews-1.bg-color-03 .txt-color-05 {
+    color: rgba(255, 255, 255, 0.9) !important;
+}

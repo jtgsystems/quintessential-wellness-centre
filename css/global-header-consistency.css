@@ -1,0 +1,46 @@
+/* Global Script Header Consistency */
+
+/* Ensure all tra-header elements use consistent Alex Brush font styling */
+.tra-header {
+  font-family: 'Alex Brush', cursive !important;
+  font-size: 6rem !important;
+  line-height: 1 !important;
+  letter-spacing: 2px !important;
+  opacity: 0.15 !important;
+  position: relative !important;
+  margin-top: -30px !important;
+  margin-bottom: -45px !important;
+  text-transform: none !important;
+  font-weight: 300 !important;
+}
+
+/* Specific overrides for different sections */
+#team-1 .tra-header,
+#services-13 .tra-header,
+#pricing-2 .tra-header,
+#contacts-1 .tra-header {
+  font-family: 'Alex Brush', cursive !important;
+  font-size: 6rem !important;
+  opacity: 0.15 !important;
+}
+
+/* Testimonials section - white on pink background */
+#reviews-1 .tra-header {
+  color: #ffffff !important;
+  opacity: 0.3 !important;
+  font-family: 'Alex Brush', cursive !important;
+  font-size: 6rem !important;
+}
+
+/* Responsive adjustments */
+@media (max-width: 991px) {
+  .tra-header {
+    font-size: 4.5rem !important;
+  }
+}
+
+@media (max-width: 767px) {
+  .tra-header {
+    font-size: 3.5rem !important;
+  }
+}

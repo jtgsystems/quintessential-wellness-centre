@@ -1,0 +1,588 @@
+/* Modern Design Enhancements for Quintessential Wellness */
+
+:root {
+    --primary-enhanced: #8B5A5A;
+    --secondary-enhanced: #D4A574;
+    --accent-enhanced: #6B8E73;
+    --dark-enhanced: #2C2C2C;
+    --light-enhanced: #F8F6F3;
+    --shadow-light: 0 4px 20px rgba(0,0,0,0.08);
+    --shadow-medium: 0 8px 30px rgba(0,0,0,0.12);
+    --transition-smooth: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* Enhanced Header */
+.header {
+    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.95);
+    transition: var(--transition-smooth);
+}
+
+/* Enhanced Navigation */
+.wsmenu-list > li > a {
+    position: relative;
+    font-weight: 500;
+    transition: var(--transition-smooth);
+}
+
+.wsmenu-list > li > a::after {
+    content: '';
+    position: absolute;
+    bottom: -5px;
+    left: 50%;
+    width: 0;
+    height: 2px;
+    background: var(--primary-enhanced);
+    transition: var(--transition-smooth);
+    transform: translateX(-50%);
+}
+
+.wsmenu-list > li:hover > a::after {
+    width: 80%;
+}
+
+/* Enhanced Hero Section with Background Image */
+#hero-10 {
+    background: linear-gradient(135deg, rgba(139, 90, 90, 0.85) 0%, rgba(212, 165, 116, 0.75) 50%, rgba(107, 142, 115, 0.85) 100%), 
+                url('../images/hero-10.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+    position: relative;
+    overflow: hidden;
+    min-height: 100vh;
+}
+
+#hero-10::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: 
+        radial-gradient(circle at 20% 80%, rgba(139, 90, 90, 0.3) 0%, transparent 50%),
+        radial-gradient(circle at 80% 20%, rgba(212, 165, 116, 0.3) 0%, transparent 50%),
+        url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 100 100"><defs><pattern id="grain" width="2" height="2" patternUnits="userSpaceOnUse"><circle cx="1" cy="1" r="0.5" fill="%23ffffff" opacity="0.05"/></pattern></defs><rect width="100" height="100" fill="url(%23grain)"/></svg>');
+    pointer-events: none;
+    z-index: 1;
+}
+
+#hero-10 .container {
+    position: relative;
+    z-index: 2;
+}
+
+.hero-10-txt {
+    text-shadow: 0 2px 10px rgba(0,0,0,0.3);
+}
+
+.hero-10-txt h1 {
+    font-size: 3.8rem;
+    line-height: 1.2;
+    color: #ffffff;
+    text-shadow: 0 3px 15px rgba(0,0,0,0.4);
+    margin-bottom: 1.5rem;
+    font-weight: 700;
+}
+
+.hero-10-txt p {
+    font-size: 1.3rem;
+    line-height: 1.8;
+    color: rgba(255,255,255,0.95);
+    text-shadow: 0 2px 8px rgba(0,0,0,0.3);
+    margin-bottom: 2.5rem;
+    max-width: 90%;
+}
+
+/* Enhanced Forms with Background Compatibility */
+.hero-form {
+    border-radius: 20px;
+    box-shadow: 0 15px 60px rgba(0,0,0,0.25);
+    border: 1px solid rgba(255,255,255,0.3);
+    backdrop-filter: blur(15px);
+    background: rgba(255,255,255,0.95);
+    transition: var(--transition-smooth);
+    position: relative;
+    z-index: 3;
+}
+
+.hero-form::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: linear-gradient(135deg, rgba(255,255,255,0.1) 0%, rgba(255,255,255,0.05) 100%);
+    border-radius: 20px;
+    pointer-events: none;
+}
+
+.hero-form:hover {
+    transform: translateY(-8px);
+    box-shadow: 0 25px 80px rgba(0,0,0,0.3);
+}
+
+.hero-form h5 {
+    position: relative;
+    z-index: 2;
+    font-weight: 600;
+    margin-bottom: 1.5rem;
+}
+
+.hero-form .form-control,
+.hero-form .custom-select {
+    position: relative;
+    z-index: 2;
+}
+
+.form-control {
+    border-radius: 12px;
+    border: 2px solid #E8E8E8;
+    padding: 15px 20px;
+    font-size: 1rem;
+    transition: var(--transition-smooth);
+}
+
+.form-control:focus {
+    border-color: var(--primary-enhanced);
+    box-shadow: 0 0 0 3px rgba(139, 90, 90, 0.1);
+    outline: none;
+}
+
+.custom-select {
+    border-radius: 12px;
+    border: 2px solid #E8E8E8;
+    padding: 15px 20px;
+    transition: var(--transition-smooth);
+}
+
+/* Enhanced Buttons */
+.btn {
+    border-radius: 25px;
+    font-weight: 600;
+    padding: 12px 32px;
+    transition: var(--transition-smooth);
+    border: none;
+    text-transform: none;
+    letter-spacing: 0.5px;
+}
+
+.btn-color-02 {
+    background: linear-gradient(135deg, var(--primary-enhanced) 0%, #A66B6B 100%);
+    box-shadow: var(--shadow-light);
+}
+
+.btn-color-02:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: linear-gradient(135deg, var(--dark-enhanced) 0%, var(--primary-enhanced) 100%);
+}
+
+/* Enhanced Heading Typography */
+.section-title h2 {
+    font-family: 'Playfair Display', serif;
+    font-size: 2.8rem;
+    line-height: 1.3;
+    margin-bottom: 1.5rem;
+    font-weight: 600;
+    letter-spacing: -0.5px;
+    text-rendering: optimizeLegibility;
+}
+
+.section-title h2.h3-xl {
+    background: linear-gradient(135deg, var(--dark-enhanced) 0%, var(--primary-enhanced) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+}
+
+.section-title h2.h3-xl::after {
+    content: '';
+    position: absolute;
+    bottom: -8px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 3px;
+    background: linear-gradient(90deg, var(--secondary-enhanced) 0%, var(--accent-enhanced) 100%);
+    border-radius: 2px;
+}
+
+.section-title p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    color: #666;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+/* Enhanced Service Cards */
+.sbox-13 {
+    border-radius: 15px;
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255,255,255,0.1);
+    backdrop-filter: blur(5px);
+}
+
+.sbox-13:hover {
+    transform: translateY(-10px);
+    box-shadow: var(--shadow-medium);
+}
+
+/* Enhanced Pricing Table */
+.pricing-2-table {
+    border-radius: 20px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+}
+
+.pricing-2-table:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.pricing-list-txt {
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+    padding: 1rem 0;
+    transition: var(--transition-smooth);
+}
+
+.pricing-list-txt:hover {
+    background: rgba(255,255,255,0.05);
+    padding-left: 1rem;
+}
+
+/* Enhanced Team Section */
+.team-member {
+    transition: var(--transition-smooth);
+}
+
+.team-member:hover {
+    transform: translateY(-10px);
+}
+
+.team-member-photo {
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+}
+
+.team-member:hover .team-member-photo {
+    box-shadow: var(--shadow-medium);
+}
+
+/* Enhanced Reviews */
+.review-1 {
+    background: var(--light-enhanced);
+    border-radius: 20px;
+    padding: 2rem;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+    border: 1px solid rgba(255,255,255,0.8);
+}
+
+.review-1:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-medium);
+}
+
+.testimonial-avatar img {
+    border-radius: 50%;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+}
+
+.review-1:hover .testimonial-avatar img {
+    transform: scale(1.05);
+}
+
+/* Enhanced Contact Section */
+.google-map iframe {
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+}
+
+.google-map:hover iframe {
+    box-shadow: var(--shadow-medium);
+}
+
+.cbox-1 {
+    padding: 1.5rem;
+    background: rgba(255,255,255,0.8);
+    border-radius: 15px;
+    box-shadow: var(--shadow-light);
+    transition: var(--transition-smooth);
+    margin-bottom: 1.5rem;
+}
+
+.cbox-1:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-medium);
+    background: rgba(255,255,255,0.95);
+}
+
+/* Footer Full-Width Background - Edge to Edge Implementation */
+.footer {
+    background: linear-gradient(135deg, var(--dark-enhanced) 0%, #3A3A3A 100%);
+    width: 100vw;                   /* Viewport width - edge to edge */
+    margin: 0;
+    padding: 60px 0 0 0;
+    position: relative;
+    left: 50%;                      /* Center positioning technique */
+    right: 50%;
+    margin-left: -50vw;             /* Negative margin pulls to edge */
+    margin-right: -50vw;            /* Negative margin pulls to edge */
+    overflow: hidden;
+}
+
+/* Override any parent container constraints */
+body .footer {
+    width: 100vw !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    left: 50% !important;
+    right: 50% !important;
+}
+
+/* Ensure footer parent has no constraints */
+.page .footer {
+    width: 100vw !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+}
+
+.footer::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    width: 100%;
+    height: 4px;
+    background: linear-gradient(90deg, var(--primary-enhanced) 0%, var(--secondary-enhanced) 50%, var(--accent-enhanced) 100%);
+}
+
+.footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;              /* Restore normal positioning for content */
+    left: auto;
+    right: auto;
+    width: auto;
+}
+
+/* Bottom Footer Full-Width with Edge Coverage */
+.bottom-footer {
+    background: rgba(0,0,0,0.2);
+    width: 100vw;                   /* Full viewport width */
+    padding: 20px 0;
+    margin: 40px 0 0 0;
+    border-top: 1px solid rgba(255,255,255,0.1);
+    position: relative;
+    left: 50%;
+    right: 50%;
+    margin-left: -50vw;             /* Edge-to-edge technique */
+    margin-right: -50vw;
+}
+
+.bottom-footer .container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+    position: relative;
+    left: auto;
+    right: auto;
+    width: auto;
+}
+
+/* Additional Footer Edge-to-Edge Overrides */
+.footer-info img {
+    transition: var(--transition-smooth);
+    filter: brightness(1.1);
+}
+
+.footer-info:hover img {
+    transform: scale(1.05);
+    filter: brightness(1.2);
+}
+
+/* Aggressive Full-Width Footer Implementation */
+#footer-1 {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    box-sizing: border-box !important;
+    position: relative !important;
+}
+
+/* Override Bootstrap/Template Container Constraints */
+.page #footer-1,
+.page .footer,
+div#footer-1,
+footer#footer-1 {
+    width: 100vw !important;
+    margin-left: calc(-50vw + 50%) !important;
+    margin-right: calc(-50vw + 50%) !important;
+    max-width: none !important;
+    left: auto !important;
+    right: auto !important;
+}
+
+/* Ensure no parent overflow hidden affects footer */
+body, 
+.page, 
+.page > div {
+    overflow-x: visible !important;
+}
+
+/* Reset any inherited constraints */
+.footer, #footer-1 {
+    transform: none !important;
+    position: relative !important;
+    display: block !important;
+    float: none !important;
+    clear: both !important;
+}
+
+/* Footer Links Enhancement - Restored */
+.footer-links ul li p a {
+    transition: var(--transition-smooth);
+    color: inherit;
+}
+
+.footer-links ul li p a:hover {
+    color: var(--secondary-enhanced);
+    transform: translateX(5px);
+}
+
+/* Newsletter Form Enhancement */
+.newsletter-form .input-group {
+    border-radius: 25px;
+    overflow: hidden;
+    box-shadow: var(--shadow-light);
+}
+
+.newsletter-form .form-control {
+    border: none;
+    border-radius: 0;
+    padding: 12px 20px;
+}
+
+.newsletter-form .btn {
+    border-radius: 0;
+    padding: 12px 20px;
+    background: var(--secondary-enhanced);
+    border: none;
+    transition: var(--transition-smooth);
+}
+
+.newsletter-form .btn:hover {
+    background: var(--primary-enhanced);
+    transform: scale(1.05);
+}
+
+/* ULTIMATE FULL-WIDTH FOOTER - NUCLEAR OPTION */
+html, body {
+    overflow-x: hidden !important;
+    width: 100% !important;
+    max-width: 100% !important;
+}
+
+.footer,
+#footer-1 {
+    position: relative !important;
+    width: 100vw !important;
+    left: 50% !important;
+    margin-left: -50vw !important;
+    margin-right: -50vw !important;
+    max-width: none !important;
+    box-sizing: border-box !important;
+    padding-left: 0 !important;
+    padding-right: 0 !important;
+}
+
+/* Alternative method for full-width */
+@media screen {
+    .footer,
+    #footer-1 {
+        width: calc(100vw) !important;
+        margin-left: calc(-50vw + 50%) !important;
+        margin-right: calc(-50vw + 50%) !important;
+        transform: translateX(0) !important;
+    }
+}
+
+/* Background Animation & Parallax Effects */
+@keyframes heroParallax {
+    0% { background-position: center 0px; }
+    100% { background-position: center -50px; }
+}
+
+#hero-10.bg-fixed {
+    animation: heroParallax 20s ease-in-out infinite alternate;
+}
+
+/* Mobile Background Optimization */
+@media (max-width: 768px) {
+    #hero-10 {
+        background-attachment: scroll;
+        animation: none;
+    }
+    
+    .hero-10-txt h1 {
+        font-size: 2.8rem;
+    }
+    
+    .hero-10-txt p {
+        font-size: 1.1rem;
+    }
+    
+    .hero-form {
+        margin-top: 2rem;
+        background: rgba(255,255,255,0.98);
+    }
+}
+
+/* Additional Section Background Enhancements */
+.about-section {
+    background: linear-gradient(180deg, rgba(248,246,243,0.8) 0%, rgba(255,255,255,1) 100%);
+}
+
+.pricing-section {
+    background: 
+        linear-gradient(135deg, rgba(248,246,243,0.9) 0%, rgba(240,237,232,0.9) 100%),
+        url('../images/bg-01.jpg') center center / cover no-repeat;
+    background-attachment: fixed;
+}
+
+.services-section {
+    background: linear-gradient(180deg, rgba(255,255,255,0.95) 0%, rgba(248,246,243,0.9) 100%);
+}
+
+/* Smooth scrolling for anchor links */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Loading animation for better UX */
+.page {
+    opacity: 0;
+    animation: fadeIn 0.8s ease-in-out forwards;
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
+}
+
+/* Enhanced focus states for accessibility */
+.btn:focus,
+.form-control:focus,
+.custom-select:focus {
+    outline: 2px solid var(--primary-enhanced);
+    outline-offset: 2px;
+}

@@ -1,0 +1,248 @@
+/* Spacing Best Practices - Quintessential Wellness */
+
+/* ========================================
+   SPACING SYSTEM
+   Using 8px grid system for consistency
+   ======================================== */
+
+:root {
+    /* Base spacing unit */
+    --space-unit: 8px;
+    
+    /* Spacing scale */
+    --space-xs: calc(var(--space-unit) * 0.5);   /* 4px */
+    --space-sm: calc(var(--space-unit) * 1);     /* 8px */
+    --space-md: calc(var(--space-unit) * 2);     /* 16px */
+    --space-lg: calc(var(--space-unit) * 3);     /* 24px */
+    --space-xl: calc(var(--space-unit) * 4);     /* 32px */
+    --space-2xl: calc(var(--space-unit) * 5);    /* 40px */
+    --space-3xl: calc(var(--space-unit) * 6);    /* 48px */
+    --space-4xl: calc(var(--space-unit) * 8);    /* 64px */
+    --space-5xl: calc(var(--space-unit) * 10);   /* 80px */
+    --space-6xl: calc(var(--space-unit) * 12);   /* 96px */
+    
+    /* Section spacing */
+    --section-padding-y: var(--space-5xl);
+    --section-padding-y-mobile: var(--space-4xl);
+    
+    /* Container gutters */
+    --container-gutter: var(--space-lg);
+    --container-gutter-mobile: var(--space-md);
+}
+
+/* ========================================
+   SECTION SPACING
+   ======================================== */
+
+.section,
+.division {
+    padding-top: var(--section-padding-y);
+    padding-bottom: var(--section-padding-y);
+}
+
+@media (max-width: 767px) {
+    .section,
+    .division {
+        padding-top: var(--section-padding-y-mobile);
+        padding-bottom: var(--section-padding-y-mobile);
+    }
+}
+
+/* Section title spacing */
+.section-title {
+    margin-bottom: var(--space-4xl) !important;
+}
+
+.section-title h2.tra-header {
+    margin-bottom: calc(var(--space-md) * -1) !important;
+    margin-top: calc(var(--space-2xl) * -1) !important;
+}
+
+.section-title h3 {
+    margin-bottom: var(--space-lg) !important;
+}
+
+.section-title p {
+    margin-bottom: 0 !important;
+}
+
+/* ========================================
+   COMPONENT SPACING
+   ======================================== */
+
+/* Team Members */
+.team-member {
+    margin-bottom: var(--space-2xl);
+}
+
+.team-member-photo {
+    margin-bottom: var(--space-lg);
+}
+
+.tm-meta {
+    margin-bottom: var(--space-md);
+}
+
+.tm-meta h6 {
+    margin-bottom: var(--space-xs);
+}
+
+/* Pricing Tables */
+.pricing-wrapper {
+    margin-top: var(--space-2xl);
+}
+
+.pricing-2-table {
+    padding: var(--space-2xl);
+}
+
+.pricing-list li {
+    padding: var(--space-md) var(--space-lg);
+}
+
+/* Service Boxes */
+.sbox-13 {
+    margin-bottom: var(--space-lg);
+    padding: var(--space-3xl);
+}
+
+/* About Boxes */
+.abox-2 {
+    padding: var(--space-2xl);
+}
+
+.abox-2-wrapper {
+    margin-top: var(--space-4xl);
+}
+
+/* Footer */
+#footer-1 {
+    padding-top: var(--space-5xl);
+}
+
+.footer-info,
+.footer-links,
+.footer-form {
+    margin-bottom: var(--space-2xl);
+}
+
+.footer-contacts {
+    margin-top: var(--space-lg);
+}
+
+.bottom-footer {
+    padding: var(--space-lg) 0;
+    margin-top: var(--space-3xl);
+}
+
+/* Contact Section */
+.contacts-info {
+    padding: var(--space-2xl);
+}
+
+.cbox-1 {
+    margin-bottom: var(--space-lg);
+}
+
+.cbox-1:last-child {
+    margin-bottom: 0;
+}
+
+/* Reviews/Testimonials */
+.review-1 {
+    padding: var(--space-2xl);
+    margin-bottom: var(--space-lg);
+}
+
+.testimonial-avatar {
+    margin-bottom: var(--space-md);
+}
+
+.author-data {
+    margin-bottom: var(--space-md);
+}
+
+/* ========================================
+   UTILITY CLASSES
+   ======================================== */
+
+/* Margin utilities */
+.mb-10 { margin-bottom: 10px !important; }
+.mb-15 { margin-bottom: 15px !important; }
+.mb-20 { margin-bottom: 20px !important; }
+.mb-25 { margin-bottom: 25px !important; }
+.mb-30 { margin-bottom: 30px !important; }
+.mb-40 { margin-bottom: 40px !important; }
+.mb-50 { margin-bottom: 50px !important; }
+.mb-60 { margin-bottom: 60px !important; }
+
+.mt-10 { margin-top: 10px !important; }
+.mt-15 { margin-top: 15px !important; }
+.mt-20 { margin-top: 20px !important; }
+.mt-25 { margin-top: 25px !important; }
+.mt-30 { margin-top: 30px !important; }
+.mt-35 { margin-top: 35px !important; }
+.mt-40 { margin-top: 40px !important; }
+.mt-50 { margin-top: 50px !important; }
+.mt-60 { margin-top: 60px !important; }
+
+/* Padding utilities */
+.pc-25 { padding: 25px !important; }
+.pb-100 { padding-bottom: 100px !important; }
+
+/* ========================================
+   RESPONSIVE SPACING
+   ======================================== */
+
+@media (max-width: 991px) {
+    /* Reduce spacing on tablets */
+    :root {
+        --section-padding-y: var(--space-4xl);
+    }
+    
+    .section-title {
+        margin-bottom: var(--space-3xl) !important;
+    }
+}
+
+@media (max-width: 767px) {
+    /* Further reduce spacing on mobile */
+    :root {
+        --section-padding-y: var(--space-3xl);
+    }
+    
+    .mb-60 { margin-bottom: var(--space-2xl) !important; }
+    .mb-50 { margin-bottom: var(--space-2xl) !important; }
+    .mb-40 { margin-bottom: var(--space-lg) !important; }
+    .mb-30 { margin-bottom: var(--space-lg) !important; }
+    
+    .mt-60 { margin-top: var(--space-2xl) !important; }
+    .mt-50 { margin-top: var(--space-2xl) !important; }
+    .mt-40 { margin-top: var(--space-lg) !important; }
+}
+
+/* ========================================
+   GRID SPACING
+   ======================================== */
+
+.row {
+    margin-left: calc(var(--container-gutter) * -0.5);
+    margin-right: calc(var(--container-gutter) * -0.5);
+}
+
+.row > [class*="col-"] {
+    padding-left: calc(var(--container-gutter) * 0.5);
+    padding-right: calc(var(--container-gutter) * 0.5);
+}
+
+@media (max-width: 767px) {
+    .row {
+        margin-left: calc(var(--container-gutter-mobile) * -0.5);
+        margin-right: calc(var(--container-gutter-mobile) * -0.5);
+    }
+    
+    .row > [class*="col-"] {
+        padding-left: calc(var(--container-gutter-mobile) * 0.5);
+        padding-right: calc(var(--container-gutter-mobile) * 0.5);
+    }
+}

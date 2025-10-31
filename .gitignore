@@ -1,0 +1,20 @@
+# Backups
+*.tar.gz
+*.zip
+*-backup-*
+new/
+
+# System files
+.htaccess
+.user.ini
+.well-known/
+
+# Editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# Logs
+*.log

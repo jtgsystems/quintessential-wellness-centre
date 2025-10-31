@@ -1,0 +1,172 @@
+/* ==========================================================================
+   ENHANCED SERVICE CARDS LAYOUT RESTRUCTURE
+   ========================================================================== */
+
+/* Override horizontal layout to vertical for enhanced service cards */
+.service-card-enhanced .row {
+    flex-direction: column !important;
+    align-items: stretch;
+}
+
+.service-card-enhanced .col-md-6 {
+    max-width: 100%;
+    flex: none;
+    padding: 0;
+}
+
+/* Enhanced Image Container - Larger and at Top */
+.service-card-enhanced .service-image-container {
+    height: 320px !important;                    /* Increased from 250px */
+    margin-bottom: 30px !important;              /* Increased spacing */
+    border-radius: 20px;
+    box-shadow: 0 8px 25px rgba(0,0,0,0.15);
+    overflow: hidden;
+    order: 1;                                    /* Ensure image comes first */
+}
+
+/* Enhanced Content Container - More Spacing */
+.service-card-enhanced .service-content-enhanced {
+    padding: 25px 30px 15px !important;         /* Increased padding */
+    order: 2;                                    /* Content comes after image */
+}
+
+/* Card Container - Increased Overall Spacing */
+.service-card-enhanced {
+    padding: 45px 35px !important;              /* Increased from 40px 30px */
+    min-height: 550px !important;               /* Increased minimum height */
+    margin-bottom: 40px;
+}
+
+/* Service Title - Enhanced Spacing */
+.service-card-enhanced .service-title-enhanced {
+    margin-bottom: 20px !important;             /* Increased spacing */
+    margin-top: 10px;
+    text-align: center;                          /* Center align for vertical layout */
+}
+
+/* Service Description - Enhanced Spacing */
+.service-card-enhanced .service-description-enhanced {
+    margin-bottom: 25px !important;             /* Increased spacing */
+    text-align: center;                          /* Center align for better readability */
+    line-height: 1.7;                           /* Improved line spacing */
+}
+
+/* Service Badge - Centered Positioning */
+.service-card-enhanced .service-badge {
+    text-align: center;
+    margin-bottom: 20px !important;             /* Increased spacing */
+}
+
+/* Benefits Section - Enhanced Layout */
+.service-card-enhanced .service-benefits {
+    margin-top: 25px !important;                /* Increased top margin */
+    padding-top: 20px;
+    border-top: 2px solid rgba(255,255,255,0.2);
+}
+
+.service-card-enhanced .benefit-item {
+    margin-bottom: 12px !important;             /* Increased spacing between items */
+    justify-content: center;                     /* Center align benefits */
+    font-size: 0.95rem;                         /* Slightly larger text */
+}
+
+/* Enhanced Image Hover Effects */
+.service-card-enhanced:hover .service-image {
+    transform: scale(1.08);                      /* Slightly more pronounced hover */
+}
+
+/* Responsive Adjustments for Vertical Layout */
+@media (max-width: 991.98px) {
+    .service-card-enhanced {
+        padding: 35px 25px !important;
+        min-height: 480px !important;
+    }
+    
+    .service-card-enhanced .service-image-container {
+        height: 280px !important;
+        margin-bottom: 25px !important;
+    }
+    
+    .service-card-enhanced .service-content-enhanced {
+        padding: 20px 20px 10px !important;
+    }
+}
+
+@media (max-width: 767.98px) {
+    .service-card-enhanced {
+        padding: 30px 20px !important;
+        min-height: 420px !important;
+        margin-bottom: 30px;
+    }
+    
+    .service-card-enhanced .service-image-container {
+        height: 240px !important;
+        margin-bottom: 20px !important;
+        border-radius: 15px;
+    }
+    
+    .service-card-enhanced .service-content-enhanced {
+        padding: 15px 15px 10px !important;
+    }
+    
+    .service-card-enhanced .service-title-enhanced {
+        font-size: 1.6rem;
+        margin-bottom: 15px !important;
+    }
+    
+    .service-card-enhanced .service-description-enhanced {
+        font-size: 0.9rem;
+        margin-bottom: 20px !important;
+    }
+}
+
+@media (max-width: 575.98px) {
+    .service-card-enhanced {
+        padding: 25px 15px !important;
+        min-height: 380px !important;
+    }
+    
+    .service-card-enhanced .service-image-container {
+        height: 200px !important;
+        margin-bottom: 18px !important;
+        border-radius: 12px;
+    }
+    
+    .service-card-enhanced .service-content-enhanced {
+        padding: 12px 10px 8px !important;
+    }
+    
+    .service-card-enhanced .benefit-item {
+        font-size: 0.85rem;
+        margin-bottom: 10px !important;
+    }
+}
+
+/* Enhanced Visual Hierarchy */
+.service-card-enhanced .service-title-enhanced {
+    text-shadow: 0 3px 6px rgba(0,0,0,0.4);
+    letter-spacing: 0.5px;
+}
+
+.service-card-enhanced .service-description-enhanced {
+    text-shadow: 0 2px 4px rgba(0,0,0,0.3);
+    max-width: 90%;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* Enhanced Card Interaction */
+.service-card-enhanced:hover {
+    transform: translateY(-12px);                /* More pronounced lift */
+    box-shadow: 0 25px 70px rgba(0,0,0,0.25);
+}
+
+/* Improved Accessibility for Vertical Layout */
+.service-card-enhanced[role="article"] {
+    display: flex;
+    flex-direction: column;
+}
+
+.service-card-enhanced .row.align-items-center {
+    align-items: stretch !important;             /* Remove center alignment for vertical layout */
+}

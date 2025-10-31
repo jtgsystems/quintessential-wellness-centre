@@ -1,0 +1,538 @@
+/* Enhanced Menu CSS - Professional Mobile & Desktop Menu with Proper Z-Index Layering */
+
+/* ========================================
+   Z-INDEX HIERARCHY SYSTEM
+   ======================================== */
+:root {
+  /* Z-Index Variables for consistent layering - Updated for preloader compatibility */
+  --z-base: 1;
+  --z-overlay: 1000;
+  --z-dropdown: 1010;
+  --z-sticky: 1020;
+  --z-fixed: 1030;
+  --z-preloader: 99999999;
+  --z-modal-backdrop: 999999999;
+  --z-modal: 999999999;
+  --z-menu: 999999999;
+  --z-menu-toggle: 1000000000;
+  --z-tooltip: 1000000001;
+
+  /* Menu Colors */
+  --menu-bg: #ffffff;
+  --menu-shadow: 0 2px 20px rgba(0, 0, 0, 0.1);
+  --menu-border: rgba(212, 165, 116, 0.1);
+  --mobile-overlay: rgba(0, 0, 0, 0.5);
+  --menu-transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* ========================================
+   PRELOADER COMPATIBILITY & MENU FIXES
+   ======================================== */
+
+/* Ensure menu always appears above preloader when page is loaded */
+#header.loaded,
+.page-loaded #header {
+  z-index: var(--z-menu) !important;
+}
+
+/* Hide preloader elements when menu is open to prevent conflicts */
+.mobile-menu-open #loader-wrapper,
+.mobile-menu-open #loading {
+  display: none !important;
+}
+
+/* Force menu elements to highest z-index when mobile menu is active */
+.mobile-menu-open #header,
+.mobile-menu-open .wsmainfull,
+.mobile-menu-open #wsnavtoggle {
+  z-index: var(--z-menu-toggle) !important;
+}
+
+/* Additional safety for slider/carousel conflicts */
+.owl-carousel,
+.swiper-container,
+.slider,
+.banner,
+.hero-section {
+  z-index: var(--z-base) !important;
+}
+
+/* Ensure menu overlay appears above all content */
+.mobile-menu-overlay {
+  z-index: var(--z-modal-backdrop) !important;
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+}
+
+/* ========================================
+   HEADER BASE STYLES
+   ======================================== */
+#header {
+  position: fixed !important;
+  top: 0;
+  left: 0;
+  width: 100%;
+  z-index: var(--z-menu) !important;
+  transition: var(--menu-transition);
+  background: var(--menu-bg);
+  box-shadow: var(--menu-shadow);
+}
+
+#header.scroll {
+  background: rgba(255, 255, 255, 0.95) !important;
+  backdrop-filter: blur(10px);
+  -webkit-backdrop-filter: blur(10px);
+}
+
+.header-wrapper {
+  position: relative;
+  z-index: inherit;
+}
+
+/* ========================================
+   DESKTOP MENU ENHANCEMENTS
+   ======================================== */
+.wsmainfull {
+  z-index: var(--z-menu) !important;
+  position: relative;
+  background: transparent !important;
+  box-shadow: none !important;
+}
+
+.wsmainwp {
+  position: relative;
+  z-index: inherit;
+}
+
+.wsmenu-list {
+  position: relative;
+  z-index: inherit;
+}
+
+.wsmenu-list li {
+  position: relative;
+}
+
+/* Desktop Menu Hover Effects */
+.wsmenu-list li a {
+  transition: var(--menu-transition);
+  position: relative;
+  padding: 15px 20px;
+  display: block;
+}
+
+.wsmenu-list li a:hover {
+  color: #d4a574 !important;
+  transform: translateY(-1px);
+}
+
+.wsmenu-list li a::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 50%;
+  width: 0;
+  height: 2px;
+  background: #d4a574;
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.wsmenu-list li a:hover::after {
+  width: 70%;
+}
+
+/* ========================================
+   MOBILE MENU SYSTEM
+   ======================================== */
+
+/* Mobile Header */
+.wsmobileheader {
+  position: relative;
+  z-index: var(--z-menu) !important;
+  background: var(--menu-bg) !important;
+  box-shadow: var(--menu-shadow) !important;
+  padding: 10px 0 !important;
+  transition: var(--menu-transition);
+}
+
+.wsmobileheader .smllogo {
+  position: relative;
+  z-index: inherit;
+  padding-left: 20px;
+  margin-top: 5px;
+}
+
+/* Mobile Menu Toggle Button */
+#wsnavtoggle {
+  position: absolute !important;
+  right: 20px !important;
+  top: 50% !important;
+  transform: translateY(-50%) !important;
+  z-index: var(--z-menu-toggle) !important;
+  width: 44px !important;
+  height: 44px !important;
+  background: rgba(212, 165, 116, 0.1) !important;
+  border-radius: 8px !important;
+  border: none !important;
+  cursor: pointer !important;
+  display: flex !important;
+  align-items: center !important;
+  justify-content: center !important;
+  transition: var(--menu-transition) !important;
+}
+
+#wsnavtoggle:hover {
+  background: rgba(212, 165, 116, 0.2) !important;
+  transform: translateY(-50%) scale(1.05) !important;
+}
+
+#wsnavtoggle:focus {
+  outline: 2px solid #d4a574 !important;
+  outline-offset: 2px !important;
+}
+
+/* Hamburger Animation */
+#wsnavtoggle span,
+#wsnavtoggle span::before,
+#wsnavtoggle span::after {
+  display: block;
+  width: 22px;
+  height: 2px;
+  background: #333;
+  transition: var(--menu-transition);
+  border-radius: 1px;
+}
+
+#wsnavtoggle span {
+  position: relative;
+}
+
+#wsnavtoggle span::before,
+#wsnavtoggle span::after {
+  content: "";
+  position: absolute;
+  left: 0;
+}
+
+#wsnavtoggle span::before {
+  top: -6px;
+}
+
+#wsnavtoggle span::after {
+  top: 6px;
+}
+
+/* Hamburger Active State */
+#wsnavtoggle.open span {
+  background: transparent;
+}
+
+#wsnavtoggle.open span::before {
+  transform: rotate(45deg);
+  top: 0;
+}
+
+#wsnavtoggle.open span::after {
+  transform: rotate(-45deg);
+  top: 0;
+}
+
+/* Mobile Menu Overlay */
+.mobile-menu-overlay {
+  position: fixed !important;
+  top: 0 !important;
+  left: 0 !important;
+  width: 100% !important;
+  height: 100% !important;
+  background: var(--mobile-overlay) !important;
+  z-index: var(--z-modal-backdrop) !important;
+  opacity: 0;
+  animation: fadeIn 0.3s ease forwards;
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
+
+/* ========================================
+   MOBILE MENU RESPONSIVE STYLES
+   ======================================== */
+@media only screen and (max-width: 991px) {
+  /* Ensure proper stacking on mobile */
+  .wsmainfull {
+    position: fixed !important;
+    top: 0 !important;
+    left: -100% !important;
+    width: 85% !important;
+    max-width: 400px !important;
+    height: 100vh !important;
+    background: var(--menu-bg) !important;
+    z-index: var(--z-menu) !important;
+    transition: left 0.3s cubic-bezier(0.4, 0, 0.2, 1) !important;
+    overflow-y: auto !important;
+    box-shadow: 2px 0 20px rgba(0, 0, 0, 0.1) !important;
+    /* Force above all other elements */
+    transform: translateZ(0) !important;
+    -webkit-transform: translateZ(0) !important;
+    isolation: isolate !important;
+  }
+
+  .wsmainfull.open {
+    left: 0 !important;
+    /* Highest possible z-index when open */
+    z-index: var(--z-menu-toggle) !important;
+  }
+
+  /* Force menu container to create new stacking context */
+  .mobile-menu-open .wsmainfull {
+    z-index: var(--z-menu-toggle) !important;
+    position: fixed !important;
+    isolation: isolate !important;
+  }
+
+  .wsmainwp {
+    padding: 80px 0 40px 0 !important;
+    height: 100%;
+    max-width: none !important;
+  }
+
+  /* Mobile Menu Items */
+  .wsmenu-list {
+    flex-direction: column !important;
+    padding: 0 !important;
+    margin: 0 !important;
+  }
+
+  .wsmenu-list li {
+    border-bottom: 1px solid var(--menu-border) !important;
+    margin: 0 !important;
+  }
+
+  .wsmenu-list li:last-child {
+    border-bottom: none !important;
+  }
+
+  .wsmenu-list li a {
+    padding: 18px 25px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    color: #333 !important;
+    text-decoration: none !important;
+    display: block !important;
+    transition: var(--menu-transition) !important;
+    border-left: 3px solid transparent !important;
+  }
+
+  .wsmenu-list li a:hover,
+  .wsmenu-list li a:focus {
+    background: rgba(212, 165, 116, 0.1) !important;
+    color: #d4a574 !important;
+    border-left-color: #d4a574 !important;
+    transform: translateX(5px) !important;
+  }
+
+  .wsmenu-list li a::after {
+    display: none !important;
+  }
+
+  /* Mobile Phone Button */
+  .header-phone a {
+    background: linear-gradient(135deg, #d4a574, #c19660) !important;
+    color: white !important;
+    border-radius: 8px !important;
+    margin: 20px 25px !important;
+    text-align: center !important;
+    border-left: none !important;
+    font-weight: 600 !important;
+  }
+
+  .header-phone a:hover {
+    background: linear-gradient(135deg, #c19660, #d4a574) !important;
+    transform: translateX(0) scale(1.02) !important;
+  }
+
+  .header-phone a span {
+    margin-right: 10px !important;
+  }
+
+  /* Hide desktop logos on mobile */
+  .desktoplogo {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   DESKTOP RESPONSIVE STYLES
+   ======================================== */
+@media only screen and (min-width: 992px) {
+  /* Hide mobile elements on desktop */
+  .wsmobileheader {
+    display: none !important;
+  }
+
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+
+  /* Desktop menu layout */
+  .wsmainfull {
+    position: static !important;
+    width: 100% !important;
+    height: auto !important;
+    background: transparent !important;
+    left: auto !important;
+    box-shadow: none !important;
+  }
+
+  .wsmainwp {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    padding: 0 15px !important;
+  }
+
+  .wsmenu {
+    margin-left: auto !important;
+  }
+
+  .wsmenu-list {
+    display: flex !important;
+    align-items: center !important;
+    margin: 0 !important;
+    padding: 0 !important;
+    list-style: none !important;
+  }
+
+  .wsmenu-list li {
+    margin: 0 5px !important;
+  }
+
+  /* Desktop phone button styling */
+  .header-phone {
+    margin-left: 20px !important;
+  }
+
+  .header-phone a {
+    background: linear-gradient(135deg, #d4a574, #c19660) !important;
+    color: white !important;
+    padding: 12px 20px !important;
+    border-radius: 25px !important;
+    text-decoration: none !important;
+    font-weight: 600 !important;
+    transition: var(--menu-transition) !important;
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+  }
+
+  .header-phone a:hover {
+    background: linear-gradient(135deg, #c19660, #d4a574) !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 5px 15px rgba(212, 165, 116, 0.3) !important;
+  }
+}
+
+/* ========================================
+   ACCESSIBILITY IMPROVEMENTS
+   ======================================== */
+
+/* Focus styles */
+.wsmenu-list li a:focus,
+#wsnavtoggle:focus {
+  outline: 2px solid #d4a574 !important;
+  outline-offset: 2px !important;
+}
+
+/* Reduced motion support */
+@media (prefers-reduced-motion: reduce) {
+  * {
+    transition: none !important;
+    animation: none !important;
+  }
+}
+
+/* High contrast mode support */
+@media (prefers-contrast: high) {
+  .wsmenu-list li a {
+    border: 1px solid currentColor !important;
+  }
+
+  #wsnavtoggle {
+    border: 2px solid currentColor !important;
+  }
+}
+
+/* ========================================
+   PRINT STYLES
+   ======================================== */
+@media print {
+  #header,
+  .mobile-menu-overlay {
+    display: none !important;
+  }
+}
+
+/* ========================================
+   ADDITIONAL SAFETY OVERRIDES
+   ======================================== */
+
+/* Override any carousel/slider z-index conflicts */
+.hero-section .owl-carousel,
+.hero-section .swiper-container,
+.hero-section .carousel,
+.hero-section .slider,
+#hero-10 * {
+  z-index: var(--z-base) !important;
+  position: relative !important;
+}
+
+/* Ensure menu never gets hidden behind any element */
+body.mobile-menu-open * {
+  z-index: auto !important;
+}
+
+body.mobile-menu-open #header,
+body.mobile-menu-open .wsmainfull,
+body.mobile-menu-open #wsnavtoggle,
+body.mobile-menu-open .mobile-menu-overlay {
+  z-index: var(--z-menu-toggle) !important;
+}
+
+/* Final safety net for any high z-index conflicts */
+.mobile-menu-overlay {
+  z-index: 999999999 !important;
+}
+
+.wsmainfull.open {
+  z-index: 1000000000 !important;
+}
+
+#wsnavtoggle {
+  z-index: 1000000001 !important;
+}
+
+/* Specific overrides for known problematic elements */
+#loader-wrapper {
+  z-index: 99999999 !important;
+}
+
+body.mobile-menu-open #loader-wrapper {
+  z-index: 1 !important;
+  display: none !important;
+}
+
+/* Performance optimization - use GPU acceleration */
+#header,
+.wsmainfull,
+#wsnavtoggle,
+.mobile-menu-overlay {
+  transform: translateZ(0) !important;
+  -webkit-transform: translateZ(0) !important;
+  will-change: transform !important;
+}
