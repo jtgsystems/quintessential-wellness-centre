@@ -94,6 +94,8 @@
     <!-- FOOTER FULL-WIDTH CRITICAL OVERRIDE -->
     <link href="./css/footer-fullwidth-override.css" rel="stylesheet">
     
+    <!-- ENHANCED MOBILE MENU CSS -->
+    <link href="./css/enhanced-mobile-menu.css" rel="stylesheet">
     
     <!-- CONTACT ALIGNMENT FIX CSS -->
     <link href="./css/contact-alignment-fix.css" rel="stylesheet">
@@ -107,9 +109,17 @@
     <!-- REMOVE IMAGE INTERACTIVITY CSS -->
     <link href="./css/remove-image-interactivity.css" rel="stylesheet">
     
+    <!-- MENU Z-INDEX FIX CSS - CRITICAL -->
+    <link href="./css/menu-z-index-fix.css" rel="stylesheet">
     
+    <!-- EMERGENCY MENU VISIBILITY FIX -->
+    <link href="./css/emergency-menu-fix.css" rel="stylesheet">
     
+    <!-- MOBILE MENU COMPREHENSIVE FIX -->
+    <link href="./css/mobile-menu-fix.css" rel="stylesheet">
     
+    <!-- MENU LAYOUT FIX CSS -->
+    <link href="./css/menu-layout-fix.css" rel="stylesheet">
     
     <!-- LOGO SHADOW AND TESTIMONIALS FIX -->
     <link href="./css/logo-shadow-testimonials-fix.css" rel="stylesheet">
@@ -306,6 +316,8 @@
     <!-- MODERN DESIGN ENHANCEMENTS -->
     <!-- <link href="/css/modern-enhancements.css" rel="stylesheet"> -->
     
+    <!-- DESKTOP MENU ENHANCEMENTS -->
+    <!-- <link href="/css/desktop-menu-enhancements.css" rel="stylesheet"> -->
     
     <!-- SEO PERFORMANCE OPTIMIZATION -->
     <!-- <link href="/css/seo-performance-optimization.css" rel="stylesheet"> -->
@@ -319,6 +331,8 @@
     <!-- FOOTER FULL-WIDTH CRITICAL OVERRIDE -->
     <link href="./css/footer-fullwidth-override.css" rel="stylesheet">
     
+    <!-- ENHANCED MOBILE MENU CSS -->
+    <link href="./css/enhanced-mobile-menu.css" rel="stylesheet">
     
     <!-- CONTACT ALIGNMENT FIX CSS -->
     <link href="./css/contact-alignment-fix.css" rel="stylesheet">
@@ -332,8 +346,14 @@
     <!-- REMOVE IMAGE INTERACTIVITY CSS -->
     <link href="./css/remove-image-interactivity.css" rel="stylesheet">
     
+    <!-- MENU Z-INDEX FIX CSS - CRITICAL -->
+    <link href="./css/menu-z-index-fix.css" rel="stylesheet">
     
+    <!-- EMERGENCY MENU VISIBILITY FIX -->
+    <link href="./css/emergency-menu-fix.css" rel="stylesheet">
     
+    <!-- MENU LAYOUT FIX CSS -->
+    <link href="./css/menu-layout-fix.css" rel="stylesheet">
     
     <!-- LOGO SHADOW AND TESTIMONIALS FIX -->
     <link href="./css/logo-shadow-testimonials-fix.css" rel="stylesheet">
@@ -355,6 +375,8 @@
   <script type="module" crossorigin src="./assets/index-DG0wr7nC.js"></script>
   <link rel="modulepreload" crossorigin href="./assets/vendor-DJG_os-6.js">
   <link rel="modulepreload" crossorigin href="./assets/router-CKjTMtTO.js">
+    <!-- REACT MOBILE MENU FIX -->
+    <link href="./css/react-mobile-menu-fix.css" rel="stylesheet">
   <link rel="modulepreload" crossorigin href="./assets/motion-ColCpB3t.js">
   <link rel="stylesheet" crossorigin href="./assets/index-H4tWP1sy.css">
 </head>
@@ -453,8 +475,14 @@
     <!-- Custom Script -->
     <script src="./js/custom.js"></script>
 
+    <!-- Enhanced Mobile Menu JavaScript -->
+    <script src="./js/enhanced-mobile-menu.js"></script>
     
+    <!-- React Mobile Menu Handler -->
+    <script src="./js/react-mobile-menu.js"></script>
     
+    <!-- REACT MOBILE MENU HANDLER -->
+    <script src="./js/react-mobile-menu-handler.js"></script>
     <!-- <script src="/js/footer-fullwidth-enforcer.js"></script> -->
 </body>
 </html>
